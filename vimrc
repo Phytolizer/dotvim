@@ -54,6 +54,9 @@ let g:formatters_c = ['clang_format']
 let g:formatdef_clang_format = '"clang-format"'
 let g:ale_completion_enabled = 1
 let g:ale_completion_autoimport = 0
+let g:ale_linters_explicit = 1
+let g:ale_lint_on_text_changed = 'never'
+let g:ale_lint_on_insert_leave = 0
 set omnifunc=ale#completion#OmniFunc
 
 autocmd FileType vim let b:autoformat_autoindent = 1
