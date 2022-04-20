@@ -45,12 +45,16 @@ if !exists('g:airline_symbols')
 endif
 let g:airline_symbols.branch = ''
 let g:airline_symbols.notexists = '?'
+let g:airline#extensions#ale#enabled = 1
 colorscheme dracula
 let g:autoformat_autoindent = 0
 let g:autoformat_retab = 0
 let g:autoformat_remove_trailing_spaces = 0
 let g:formatters_c = ['clang_format']
 let g:formatdef_clang_format = '"clang-format"'
+let g:ale_completion_enabled = 1
+let g:ale_completion_autoimport = 0
+set omnifunc=ale#completion#OmniFunc
 
 autocmd FileType vim let b:autoformat_autoindent = 1
 autocmd BufWrite * :Autoformat
