@@ -10,6 +10,7 @@ set termguicolors
 set incsearch
 set nohlsearch
 set autowrite
+set nowrap
 set number
 set numberwidth=4
 set signcolumn=yes
@@ -20,6 +21,8 @@ set directory=~/.vim/swap//
 if has("patch-8.1.0360")
     set diffopt+=internal,algorithm:patience
 endif
+
+runtime autosource.vim
 
 " Autocommands that don't need plugins.
 autocmd BufRead,BufNewFile .clang-format set ft=yaml
