@@ -42,14 +42,14 @@ command! PackClean  source $MYVIMRC | call PackInit() | call minpac#clean()
 command! PackStatus packadd minpac | call minpac#status()
 
 " Configuration that needs plugins.
-let g:airline_theme = 'dracula'
+let g:airline_theme = 'base16_darktooth'
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
 let g:airline_symbols.branch = ''
 let g:airline_symbols.notexists = '?'
 let g:airline#extensions#ale#enabled = 1
-colorscheme dracula
+colorscheme base16-darktooth
 let g:autoformat_autoindent = 0
 let g:autoformat_retab = 0
 let g:autoformat_remove_trailing_spaces = 0
