@@ -66,5 +66,6 @@ let g:rooter_patterns = ['.git', '.local_vimrc.vim']
 set omnifunc=ale#completion#OmniFunc
 
 autocmd FileType vim let b:autoformat_autoindent = 1
+autocmd FileType json syntax sync minlines=100
 autocmd BufWrite * :Autoformat
 
