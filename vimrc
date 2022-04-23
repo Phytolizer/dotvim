@@ -18,6 +18,7 @@ set shiftround
 set wildignore=*.o
 set t_ut=
 set directory=~/.vim/swap//
+set clipboard^=unnamedplus
 if has("patch-8.1.0360")
     set diffopt+=internal,algorithm:patience
 endif
@@ -57,12 +58,15 @@ let g:formatters_c = ['clang_format']
 let g:formatdef_clang_format = '"clang-format"'
 let g:formatters_rs = ['rustfmt']
 let g:formatdef_rustfmt = '"rustfmt"'
+let g:formatters_haskell = ['hindent']
+let g:formatdef_hindent = '"hindent"'
 let g:ale_completion_enabled = 1
 let g:ale_completion_autoimport = 0
 let g:ale_linters_explicit = 1
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_insert_leave = 0
 let g:rooter_patterns = ['.git', '.local_vimrc.vim']
+let g:SuperTabDefaultCompletionType = "<c-n>"
 set omnifunc=ale#completion#OmniFunc
 
 autocmd FileType vim let b:autoformat_autoindent = 1
