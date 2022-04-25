@@ -23,6 +23,7 @@ if has("patch-8.1.0360")
     set diffopt+=internal,algorithm:patience
 endif
 set t_vb=
+runtime! ftplugin/man.vim
 
 runtime autosource.vim
 
@@ -44,14 +45,15 @@ command! PackClean  source $MYVIMRC | call PackInit() | call minpac#clean()
 command! PackStatus packadd minpac | call minpac#status()
 
 " Configuration that needs plugins.
-let g:airline_theme = 'base16_darktooth'
+let g:airline_theme = 'base16_ashes'
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
 let g:airline_symbols.branch = ''
 let g:airline_symbols.notexists = '?'
 let g:airline#extensions#ale#enabled = 1
-colorscheme base16-darktooth
+let g:airline#extensions#whitespace#mixed_indent_algo = 2
+colorscheme base16-ashes
 let g:autoformat_autoindent = 0
 let g:autoformat_retab = 0
 let g:autoformat_remove_trailing_spaces = 0
@@ -71,8 +73,6 @@ let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_insert_leave = 0
 let g:rooter_patterns = ['.git', '.local_vimrc.vim']
 let g:SuperTabDefaultCompletionType = "<c-n>"
-nnoremap K <Plug>(ale_hover)
-nnoremap <C-]> <Plug>(ale_go_to_definition)
 set omnifunc=ale#completion#OmniFunc
 
 autocmd FileType vim let b:autoformat_autoindent = 1
